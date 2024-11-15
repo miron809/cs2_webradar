@@ -88,7 +88,7 @@ const App = () => {
             ...(await (await fetch(`data/${map}/data.json`)).json()),
             name: map,
           });
-          document.body.style.backgroundImage = `url(./data/${map}/background.png)`;
+          // document.body.style.backgroundImage = `url(./data/${map}/background.png)`;
         }
       };
     };
@@ -100,8 +100,8 @@ const App = () => {
     <div
       className={`w-screen h-screen flex flex-col justify-center backdrop-blur-[7.5px]`}
       style={{
-        background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
-        backdropFilter: `blur(7.5px)`,
+        // background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
+        // backdropFilter: `blur(7.5px)`,
       }}
     >
       {bombData && bombData.m_blow_time > 0 && !bombData.m_is_defused && (
@@ -129,19 +129,19 @@ const App = () => {
       )}
 
       <div className={`flex items-center justify-evenly`}>
-        <Latency value={averageLatency} />
+        {/*<Latency value={averageLatency} />*/}
 
-        <ul id="terrorist" className="lg:flex hidden flex-col gap-7 m-0 p-0">
-          {playerArray
-            .filter((player) => player.m_team == 2)
-            .map((player) => (
-              <PlayerCard
-                right={false}
-                key={player.m_idx}
-                playerData={player}
-              />
-            ))}
-        </ul>
+        {/*<ul id="terrorist" className="lg:flex hidden flex-col gap-7 m-0 p-0">*/}
+        {/*  {playerArray*/}
+        {/*    .filter((player) => player.m_team == 2)*/}
+        {/*    .map((player) => (*/}
+        {/*      <PlayerCard*/}
+        {/*        right={false}*/}
+        {/*        key={player.m_idx}*/}
+        {/*        playerData={player}*/}
+        {/*      />*/}
+        {/*    ))}*/}
+        {/*</ul>*/}
 
         {(playerArray.length > 0 && mapData && (
           <Radar
@@ -160,16 +160,16 @@ const App = () => {
           </div>
         )}
 
-        <ul
-          id="counterTerrorist"
-          className="lg:flex hidden flex-col gap-7 m-0 p-0"
-        >
-          {playerArray
-            .filter((player) => player.m_team == 3)
-            .map((player) => (
-              <PlayerCard right={true} key={player.m_idx} playerData={player} />
-            ))}
-        </ul>
+        {/*<ul*/}
+        {/*  id="counterTerrorist"*/}
+        {/*  className="lg:flex hidden flex-col gap-7 m-0 p-0"*/}
+        {/*>*/}
+        {/*  {playerArray*/}
+        {/*    .filter((player) => player.m_team == 3)*/}
+        {/*    .map((player) => (*/}
+        {/*      <PlayerCard right={true} key={player.m_idx} playerData={player} />*/}
+        {/*    ))}*/}
+        {/*</ul>*/}
       </div>
     </div>
   );

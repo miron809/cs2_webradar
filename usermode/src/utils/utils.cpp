@@ -67,13 +67,13 @@ bool utils::is_updated()
         const auto json_response = nlohmann::json::parse(read_buffer);
 
         const auto& latest_release_name = json_response["name"].get<std::string>();
-        if (latest_release_name != CS2_WEBRADAR_VERSION)
-        {
-            const auto output = std::format("version mismatch! current 'cs2_webradar' version is '{}'\n           please get the latest version of 'cs2_webradar'", latest_release_name.c_str());
-            LOG_WARNING("%s", output.c_str());
-            MessageBoxA(nullptr, output.c_str(), "usermode " CS2_WEBRADAR_VERSION, MB_OK);
-            return {};
-        }
+//         if (latest_release_name != CS2_WEBRADAR_VERSION)
+//         {
+//             const auto output = std::format("version mismatch! current 'cs2_webradar' version is '{}'\n           please get the latest version of 'cs2_webradar'", latest_release_name.c_str());
+//             LOG_WARNING("%s", output.c_str());
+//             MessageBoxA(nullptr, output.c_str(), "usermode " CS2_WEBRADAR_VERSION, MB_OK);
+//             return {};
+//         }
     }
     catch (const nlohmann::json::parse_error& e)
     {
