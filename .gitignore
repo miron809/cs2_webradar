@@ -1,3 +1,4 @@
 kernelmode
 usermode/src/driver/driver.hpp
 .idea
+.vs
