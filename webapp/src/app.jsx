@@ -100,12 +100,13 @@ const App = () => {
     <div
       className={`w-screen h-screen flex flex-col justify-center backdrop-blur-[7.5px]`}
       style={{
-        // background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
-        // backdropFilter: `blur(7.5px)`,
+        background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
+        backdropFilter: `blur(7.5px)`,
       }}
     >
       {bombData && bombData.m_blow_time > 0 && !bombData.m_is_defused && (
-        <div className={`flex flex-col items-center gap-1`}>
+        <div className={`flex flex-col items-center gap-1`}
+        style={{position: 'absolute', top: '0', left: '50%', transform: 'translateX(-50%)', background: 'black'}}>
           <div className={`flex justify-center items-center gap-1`}>
             <MaskedIcon
               path={`./assets/icons/c4_sml.png`}

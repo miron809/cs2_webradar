@@ -58,7 +58,9 @@ const Player = ({ playerData, mapData, radarImage, localTeam, averageLatency }) 
             playerColors[playerData.m_color]) ||
           `red`
         }`,
-        opacity: `${
+          // backgroundColor: `${(playerColors[playerData.m_color])}`,
+          // border: playerData.m_team !== localTeam ? '1px solid red' : 'none',
+          opacity: `${
           (playerData.m_is_dead && `0.8`) || (invalidPosition && `0`) || `1`
         }`,
         WebkitMask: `${
