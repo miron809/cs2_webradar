@@ -6,7 +6,7 @@ app.on('ready', () => {
         width: 450,
         height: 450,
         x: width - 450,
-        y: 0,
+        y: 100,
         transparent: true,
         frame: false,
         // alwaysOnTop: true,
@@ -14,6 +14,6 @@ app.on('ready', () => {
             nodeIntegration: false,
         },
     });
-    
-    win.loadURL('http://localhost:5173/'); 
+
+    win.loadURL('http://localhost:5173/');
 });

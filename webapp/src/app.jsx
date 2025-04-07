@@ -100,7 +100,7 @@ const App = () => {
     <div
       className={`w-screen h-screen flex flex-col justify-center backdrop-blur-[7.5px]`}
       style={{
-        background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
+        // background: `radial-gradient(50% 50% at 50% 50%, rgba(20, 40, 55, 0.95) 0%, rgba(7, 20, 30, 0.95) 100%)`,
         backdropFilter: `blur(7.5px)`,
       }}
     >
