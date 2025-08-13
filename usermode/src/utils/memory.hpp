@@ -32,6 +32,7 @@ public:
 	std::optional<void*> hijack_handle();
 	std::optional<c_address> find_pattern(const std::string_view& module_name, const std::string_view& pattern);
 	std::pair<std::optional<uintptr_t>, std::optional<uintptr_t>> get_module_info(const std::string_view& module_name);
+	bool is_anticheat_running();
 
 	bool read_t(const uintptr_t address, void* buffer, uintptr_t size)
 	{
@@ -44,11 +45,10 @@ public:
 	{
 		t value{ 0 };
 		this->read_memory(address, &value, sizeof(t));
-
 		return value;
 	}
 
-	template<typename T>
+	template <typename T>
 	T read_t(const uintptr_t address) noexcept
 	{
 		T buffer{};
@@ -82,4 +82,5 @@ private:
 		return ReadProcessMemory(this->m_handle, reinterpret_cast<void*>(address), buffer, size, nullptr);
 	}
 };
+
 inline const std::unique_ptr<c_memory> m_memory{ new c_memory() };
